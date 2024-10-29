@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100svh;
+}
+h1 {
+    text-align: center;
+    margin-block: 40px;
+}
+main {
+    border: solid 1px black;
+    padding: 1em;
+    display: grid;
+    max-width: 80%;
+    min-height: 60svh;
+    margin-inline: auto;
+    grid-template-columns:  repeat(4, minmax(100px,  1fr));
+    gap: .7em;
+    grid-auto-rows: 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "two two three aside"
+    "five five six aside"
+    "five five seven eight"
+    ;
+}
+div {
+    display: grid;
+    place-items: center;
+    border: solid 1px black;
+    min-height: 100px;
+    font-size: 3rem;
+    background-color: chocolate;
+}
+.item1{
+    grid-area: header;
+   
+}
+.item2{
+    grid-area: two;
+    background-color: blueviolet ;
+}
+.item3{
+   grid-area:three;
+    background-color: coral;
+}
+.item4{
+    grid-area: aside;
+    background-color: palevioletred;
+}
+.item5{
+    grid-area: five;
+    background-color: blue;
+}
+.item6{
+    grid-area: six;
+    background-color: lawngreen;
+}
+.item7{
+    grid-area: seven;
+    background-color:black ;
+    color: aliceblue;
+}
+.item8{
+    grid-area: eight;
+    background-color: lightseagreen;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: aliceblue;
+}
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+}
